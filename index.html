@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/public.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css" media="screen"/>
+    <title>首页</title>
+</head>
+<body>
+<!--加载遮罩层-->
+<div id="layer">
+    <div class="spinner">
+        <div class="bounce1 balls"></div>
+        <div class="bounce2 balls"></div>
+        <div class="bounce3 balls"></div>
+        <div class="bounce4 balls"></div>
+        <div class="bounce5 balls"></div>
+    </div>
+</div>
+
+<!--首页头部-->
+<div class="fixOn">
+    <div class="index-head bgColorOrange">
+        <a href="javascript:history.back();" class="menu-left"><i class="ico ico-menu"></i></a>
+        <div class="menu-mid"><img src="images/index-logo.png" alt="微购LOGO"/></div>
+        <a href="javascript:void(0);" class="menu-right"><i class="ico ico-zoom"></i></a>
+    </div>
+    <!--导航栏-->
+    <div class="index-nav">
+        <div class="list-item">
+            <a href="javascript:void(0);" class="nav-item active">微购首页</a>
+            <a href="javascript:void(0);" class="nav-item">微购夺宝</a>
+            <a href="javascript:void(0);" class="nav-item">尖货闪购</a>
+            <a href="javascript:void(0);" class="nav-item">海外好货</a>
+            <a href="javascript:void(0);" class="nav-item">微购首页</a>
+            <a href="javascript:void(0);" class="nav-item">微购夺宝</a>
+            <span class="underLine"></span>
+        </div>
+    </div>
+</div>
+
+<!--新增实时动态-->
+<div id="timesNotice" class="times-msg">
+    <ul>
+        <li><a href=""><i class="msg-icon-user-img"><img src="images/tx.jpg" alt="头像"/></i>兔斯基先森购买了枸杞，1小时前</a></li>
+        <li><a href=""><i class="msg-icon-user-img"><img src="images/tx.jpg" alt="头像"/></i>兔斯基先森购买了枸杞，1小时前</a></li>
+        <li><a href=""><i class="msg-icon-user-img"><img src="images/tx.jpg" alt="头像"/></i>兔斯基先森购买了枸杞，1小时前</a></li>
+        <li><a href=""><i class="msg-icon-user-img"><img src="images/tx.jpg" alt="头像"/></i>兔斯基先森购买了枸杞，1小时前</a></li>
+        <li><a href=""><i class="msg-icon-user-img"><img src="images/tx.jpg" alt="头像"/></i>兔斯基先森购买了枸杞，1小时前</a></li>
+        <li><a href=""><i class="msg-icon-user-img"><img src="images/tx.jpg" alt="头像"/></i>兔斯基先森购买了枸杞，1小时前</a></li>
+    </ul>
+</div>
+
+<div class="index-wrap-all">
+<!--图片轮播-->
+<div id="slideBox">
+    <div class="slideItems">
+        <a href="details.html" class="sliding"><img src="images/slideImg01.jpg" alt="图片滚动"/></a>
+        <a href="details.html"><img src="images/slideImg01.jpg" alt="图片滚动"/></a>
+        <a href="details.html"><img src="images/slideImg01.jpg" alt="图片滚动"/></a>
+    </div>
+    <ul class="items-cursor">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<!--产品分类-->
+<div class="wrap">
+    <div class="index-category">
+        <div class="pagination padding10">
+            <a href="List.html"><i class="icon icon-fzxp"></i>
+
+                <p class="category-txt">服饰鞋品</p></a>
+            <a href="List.html"><i class="icon icon-mzhf"></i>
+
+                <p class="category-txt">美妆护肤</p></a>
+            <a href="List.html"><i class="icon icon-wbps"></i>
+
+                <p class="category-txt">腕表配饰</p></a>
+            <a href="List.html"><i class="icon icon-xxls"></i>
+
+                <p class="category-txt">休闲零食</p></a>
+            <a href="List.html"><i class="icon icon-smjd"></i>
+
+                <p class="category-txt">数码电器</p></a>
+            <a href="List.html"><i class="icon icon-xbpj"></i>
+
+                <p class="category-txt">箱包皮具</p></a>
+            <a href="List.html"><i class="icon icon-myyt"></i>
+
+                <p class="category-txt">母婴孕童</p></a>
+            <a href="List.html"><i class="icon icon-qjsn"></i>
+
+                <p class="category-txt">清洁收纳</p></a>
+        </div>
+        <div class="pagination padding10">
+            <a href="List.html"><i class="icon icon-nfzl"></i>
+
+                <p class="category-txt">农副杂粮</p></a>
+            <a href="List.html"><i class="icon icon-sgsx"></i>
+
+                <p class="category-txt">蔬果生鲜</p></a>
+            <a href="List.html"><i class="icon icon-cjly"></i>
+
+                <p class="category-txt">茶酒粮油</p></a>
+            <a href="List.html"><i class="icon icon-bjzb"></i>
+
+                <p class="category-txt">保健滋补</p></a>
+        </div>
+    </div>
+    <ul class="category-nav">
+        <li class="active"></li>
+        <li></li>
+    </ul>
+</div>
+<!--滚动公告栏-->
+<div class="rolling-pane">
+    <div class="padding10 rotate-ball"><span class="ball"></span></div>
+    <div class="rolling-msg" id="rollingMsg">
+        <ul class="msg-box">
+            <li><a href="">1总穿高跟鞋 你该来点不一样的平底鞋！<i class="icon icon-angle-right"></i></a></li>
+            <li><a href="">2总穿高跟鞋 你该来点不一样的平底鞋！<i class="icon icon-angle-right"></i></a></li>
+        </ul>
+    </div>
+</div>
+<!--分列式开始-->
+<!--微购今日鲜-->
+<div class="content-box ">
+    <div class="content-title padding10">
+        <div class="title-line f-left"></div>
+        <div class="title-txt f-left">微购今日鲜</div>
+        <div class="title-line f-right"></div>
+    </div>
+    <div class="content-pro">
+        <a href=""><img src="images/content-img.jpg" alt="产品图片"/></a>
+    </div>
+    <div class="content-list">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="">
+                        <img src="images/list-01.jpg" alt="产品1"/>
+                        <!--<span class="pro-price"><em>¥</em>85.58</span>-->
+                    </a>
+                    <p class="temp-name">这是产品这是产品名称这是产品名称这是产品名称名称</p>
+                    <p class="temp-price"><span>¥125.25</span><span class="origin-price">¥125.25</span></p>
+                </div>
+                <div class="swiper-slide">
+                    <a href=""><img src="images/list-01.jpg" alt="产品1"/><span class="pro-price"><em>¥</em>85.58</span></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href=""><img src="images/list-01.jpg" alt="产品1"/><span class="pro-price"><em>¥</em>85.58</span></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href=""><img src="images/list-01.jpg" alt="产品1"/><span class="pro-price"><em>¥</em>85.58</span></a>
+                </div>
+            </div>
+            <div class="swiper-button-prev swiper-button-white"></div><div class="swiper-button-next swiper-button-white"></div>
+        </div>
+
+    </div>
+</div>
+<!--content-box-->
+<!--微购特卖会-->
+<div class="content-box ">
+    <div class="content-title padding10">
+        <div class="title-line f-left"></div>
+        <div class="title-txt f-left">微购特卖会</div>
+        <div class="title-line f-right"></div>
+    </div>
+    <div class="content-pro">
+        <a href=""><img src="images/wptmh.jpg" alt="塑身好神器"/></a>
+        <span class="ads-note">塑身好神器塑身好神器塑身好神器</span>
+    </div>
+    <div class="content-info-pane">
+        <a href="">
+            <div class="info-left">裙子夏季2016夏装新款潮女装韩版修身显瘦中长款棉印花衬衫连衣裙</div>
+            <div class="info-right">
+                <i class="icon icon-clocker"></i>
+                <span id="timerDis"></span>
+            </div>
+        </a>
+    </div>
+</div>
+<!--content-box-->
+
+<!--双12活动模块-->
+<div class="content-box">
+    <div class="content-pro">
+        <a href=""><img src="images/1212.jpg" class="img-responsive" alt="塑身好神器"/></a>
+    </div>
+    <div class="content-1212">
+       <div class="content-1212-items">
+           <div class="content-1212-itemsI"><a href=""><img src="images/1212Item.jpg" class="img-responsive" /></a></div>
+       </div>
+       <!--content-1212-items-->
+        <div class="content-1212-items">
+            <div class="content-1212-itemsI"><a href=""><img src="images/1212Item.jpg" class="img-responsive" /></a></div>
+        </div>
+        <!--content-1212-items-->
+        <div class="content-1212-items">
+            <div class="content-1212-itemsI"><a href=""><img src="images/1212Item.jpg" class="img-responsive" /></a></div>
+        </div>
+        <!--content-1212-items-->
+        <div class="content-1212-items">
+            <div class="content-1212-itemsI"><a href=""><img src="images/1212Item.jpg" class="img-responsive" /></a></div>
+        </div>
+        <!--content-1212-items-->
+        <div class="content-1212-items">
+            <div class="content-1212-itemsI"><a href=""><img src="images/1212Item.jpg" class="img-responsive" /></a></div>
+        </div>
+        <!--content-1212-items-->
+        <div class="content-1212-items">
+            <div class="content-1212-itemsI"><a href=""><img src="images/1212Item.jpg" class="img-responsive" /></a></div>
+        </div>
+        <!--content-1212-items-->
+    </div>
+</div>
+<!--content-box-->
+
+<!--微购夺宝-->
+<div class="content-box">
+    <div class="content-title padding10">
+        <div class="title-line f-left"></div>
+        <div class="title-txt f-left">微购夺宝</div>
+        <div class="title-line f-right"></div>
+    </div>
+    <div class="content-pro">
+        <a href=""><img src="images/wgdb.jpg" alt="微购夺宝"/></a>
+    </div>
+
+    <div class="db-progress-info padding10">
+        <div class="progress-pane">
+            <span class="progress-G"></span>
+            <span class="progress-O" style="width:20%"></span>
+        </div>
+        <div class="info-pane">
+            <div class="pro-name f-left">裙子夏季2016夏装新款潮女装韩版修身显瘦中长款棉印花衬衫连衣裙</div>
+            <a href="javascript:void(0);" class="f-right db-btn">立即夺宝</a>
+        </div>
+    </div>
+</div>
+<!--尖货闪购-->
+<div class="content-box">
+    <div class="content-title padding10">
+        <div class="title-line f-left"></div>
+        <div class="title-txt f-left">尖货闪购</div>
+        <div class="title-line f-right"></div>
+    </div>
+    <div class="content-pro">
+        <a href=""><img src="images/jhsg.jpg" alt="微购夺宝"/></a>
+        <span class="jh-times"><i class="icon ico-clock-white"></i> 120s</span>
+    </div>
+
+    <div class="db-progress-info padding10">
+        <div class="info-pane">
+            <div class="pro-name f-left">裙子夏季2016夏装新款潮女装韩版</div>
+            <a href="javascript:void(0);" class="f-right db-btn">立即购买</a>
+        </div>
+        <div class="info-pane pro-price"><em>¥</em>185.65</div>
+    </div>
+</div>
+<!--大家都喜欢-->
+<div class="index-love">
+    <div class="content-title padding10">
+        <div class="title-line f-left"></div>
+        <div class="title-txt f-left">大家都喜欢</div>
+        <div class="title-line f-right"></div>
+    </div>
+    <div class="love-markup-pane">
+        <div class="love-btn active"><a href="javascript:void(0);">仙居杨梅</a></div>
+        <div class="love-btn"><a href="javascript:void(0);">夏季男裤</a></div>
+        <div class="love-btn"><a href="javascript:void(0);">仙居杨梅</a></div>
+        <div class="love-btn"><a href="javascript:void(0);">夏季男裤</a></div>
+        <div class="love-btn"><a href="javascript:void(0);">仙居杨梅</a></div>
+        <div class="love-btn"><a href="javascript:void(0);">夏季男裤</a></div>
+        <div class="love-btn"><a href="javascript:void(0);">仙居杨梅</a></div>
+        <div class="love-btn"><a href="javascript:void(0);">夏季男裤</a></div>
+    </div>
+</div>
+<!--猜你喜欢-->
+<div class="guess-u-love ">
+    <div class="content-title padding10">
+        <div class="title-line f-left"></div>
+        <div class="title-txt f-left" style="color:#aaa;">猜你喜欢</div>
+        <div class="title-line f-right"></div>
+    </div>
+    <div class="guess-content-list padding10">
+        <a href="" class="guess-content-item paddingR">
+            <img src="images/item01.jpg" alt="夏威夷坚果"/>
+
+            <div class="info-wrap padding10">
+                <p class="item-name">夏威夷坚果夏威夷坚果夏威夷坚果</p>
+
+                <p class="item-price"><em>¥</em>258.46</p>
+            </div>
+        </a>
+        <!--guess-content-item-->
+        <a href="" class="guess-content-item paddingL">
+            <img src="images/item02.jpg" alt="夏威夷坚果"/>
+
+            <div class="info-wrap padding10">
+                <p class="item-name">夏威夷坚果夏威夷坚果夏威夷坚果</p>
+
+                <p class="item-price"><em>¥</em>258.46</p>
+            </div>
+        </a>
+        <!--guess-content-item-->
+        <a href="" class="guess-content-item paddingR">
+            <img src="images/item03.jpg" alt="夏威夷坚果"/>
+
+            <div class="info-wrap padding10">
+                <p class="item-name">夏威夷坚果夏威夷坚果夏威夷坚果</p>
+
+                <p class="item-price"><em>¥</em>258.46</p>
+            </div>
+        </a>
+        <!--guess-content-item-->
+        <a href="" class="guess-content-item paddingL">
+            <img src="images/item04.jpg" alt="夏威夷坚果"/>
+
+            <div class="info-wrap padding10">
+                <p class="item-name">夏威夷坚果夏威夷坚果夏威夷坚果</p>
+
+                <p class="item-price"><em>¥</em>258.46</p>
+            </div>
+        </a>
+        <!--guess-content-item-->
+    </div>
+</div>
+<!--底部加载-->
+<div class="footer-hide-loading">
+    <!--努力加载中-->
+    <div class="loading-pane"><i class="icon icon-loading"></i><span>本宝正在努力加载中...</span></div>
+    <!--没有更多了-->
+    <!--<div class="loading-pane"><span>没有更多了</span></div>-->
+</div>
+</div>
+
+<!--底部导航栏-->
+<div class="footer">
+    <a href="index.html" class="footer-btn"><i class="icon ico-home"></i></a>
+    <a href="category.html" class="footer-btn"><i class="icon ico-order"></i></a>
+    <a href="cart.html" class="footer-btn"><i class="icon ico-cart"><span class="cart-counts">5</span></i></a>
+    <a href="profile.html" class="footer-btn"><i class="icon ico-profile"></i></a>
+</div>
+
+<!--搜索栏页面-->
+<div class="searchBox-layer">
+    <!--搜索框-->
+    <div class="search-input ">
+        <form action="" method="post" role="form"><input type="text" name="searchName" class="searchKeyWords"
+                                                         placeholder="iPhone 7s Plus"/><span class="cancle-icon"><img
+                src="images/cancle.png"/></span></form>
+    </div>
+    <!--非设计搞样式 后期维护再讨论-->
+    <!--
+     <div class="search-result-pane bgColorWhite padding10">
+    </div>
+    -->
+    <div class="index-love">
+        <div class="content-title padding10">
+            <div class="title-line f-left"></div>
+            <div class="title-txt f-left">大家都喜欢</div>
+            <div class="title-line f-right"></div>
+        </div>
+        <div class="love-markup-pane">
+            <div class="love-btn active"><a href="javascript:void(0);">仙居杨梅</a></div>
+            <div class="love-btn"><a href="javascript:void(0);">夏季男裤</a></div>
+            <div class="love-btn"><a href="javascript:void(0);">仙居杨梅</a></div>
+            <div class="love-btn"><a href="javascript:void(0);">夏季男裤</a></div>
+            <div class="love-btn"><a href="javascript:void(0);">仙居杨梅</a></div>
+            <div class="love-btn"><a href="javascript:void(0);">夏季男裤</a></div>
+            <div class="love-btn"><a href="javascript:void(0);">仙居杨梅</a></div>
+            <div class="love-btn"><a href="javascript:void(0);">夏季男裤</a></div>
+        </div>
+    </div>
+
+    <div class="index-love search-result">
+        <div class="content-title padding10">
+            <div class="title-line f-left"></div>
+            <div class="title-txt f-left">搜索结果</div>
+            <div class="title-line f-right"></div>
+        </div>
+        <div class="result-list padding10">
+            <div class="item-wrap">
+            </div>
+            <p class="less-msg msg">宝宝只能帮您搜到这些了！</p>
+            <a href="" class="more-msg msg">全部搜索结果</a>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/msgMarquee.js"></script>
+<script src="js/touchSlide.js"></script>
+<script src="js/TouchLoading.js"></script>
+<script src="js/ImageSlide.js"></script>
+<script src="js/preventDefault.js"></script>
+<script src="js/search.js"></script>
+<script type="text/javascript">
+    $(function () {
+        touchSlide.Slide($(".index-nav"), $(".list-item"));
+        searchBox.btnClick($(".menu-right"), $(".searchBox-layer"), $(".cancle-icon"));
+        $(".searchKeyWords").bind('input propertychange', function () {
+            startSearch();
+        });
+        /*实时订单动态*/
+        $(".times-msg").css({"top": $(".fixOn").height() + 5 + "px", "borderRadius": $(".fixOn").height()});
+    });
+
+    /*产品倒计时*/
+    function timeDis() {
+        var nds = document.getElementById("timerDis");
+        nds.innerHTML = "";
+        var endtime = 1469953779986, nowTime = (new Date()).getTime(), bt = 0;
+        bt = endtime - nowTime;
+        day = Math.floor(bt / 24 / 60 / 60 / 1000);
+        hours = Math.floor(bt / 1000 / 60 / 60 % 24);
+        minutes = Math.floor(bt / 1000 / 60 % 60);
+        seconds = Math.floor(bt / 1000 % 60);
+        nds.innerHTML = (hours > 10 ? hours : "0" + hours) + "时" + (minutes > 10 ? minutes : "0" + minutes) + "分" + (seconds > 10 ? seconds : "0" + seconds) + "秒";
+        if (hours <= 0 && minutes <= 0 && seconds <= 0) {
+            nds.innerHTML = "活动已结束"
+        }
+    }
+    setInterval("timeDis()", 1000);
+
+
+
+    var swiper = new Swiper('.swiper-container',{
+        freeMode:true,
+        slidesPerView:3,
+		prevButton:'.swiper-button-prev',
+		nextButton:'.swiper-button-next'
+
+    });
+
+</script>
+</body>
+</html>

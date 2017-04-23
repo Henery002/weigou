@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/public.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/category.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/profile.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/order.css" media="screen"/>
+    <title>商品云销</title>
+</head>
+<body>
+<!--首页头部-->
+<div class="fixOn">
+    <div class="index-head bgColorWhite">
+        <a href="javascript:history.back();" class="menu-left"><i class="ico ico-back"></i></a>
+
+        <div class="menu-mid">
+            <span class="head-title">商品云销</span>
+        </div>
+        <a href="javascript:void(0);" class="menu-right"><i class="ico ico-zoom-back"></i></a>
+    </div>
+    <span class="underLine"></span>
+</div>
+
+<div class="category-wrap-all ">
+   <div class="cloudy-info bgColorWhite padding10 marginB1rem">
+      <p class="cloudy-income">20000</p>
+      <p class="cloudy-txt ">云销总收入(<em>¥</em>)</p>
+      <div class="clody-income-detail">
+          <span><p>可用余额</p><p>50000000</p></span>
+          <span><p>不可用余额</p><p>15000</p></span>
+      </div>
+   </div>
+   <!--cloudy-info-->
+    <!--收入明细-->
+    <div class="order-income-deBox bgColorWhite">
+        <div class="order-income-deBox-txt bgColorLightGray padding10">收入明细</div>
+        <div class="order-income-nav">
+            <a href="javascript:void(0);" class="col33 active">全部</a>
+            <a href="javascript:void(0);" class="col33">收入</a>
+            <a href="javascript:void(0);" class="col33">提现</a>
+            <span class="borderLine"></span>
+        </div>
+        <div class="order-income-list padding10">
+            <div class="order-income-items">
+                <div class="col50 pull-left item-left">
+                    <i class="items-icon icon-rmb"></i>
+                    <p>收到了XX的返佣金</p>
+                    <p class="date-time">2016-10-26 11:57</p>
+                </div>
+                <div class="col50 pull-right item-right">
+                    <p>+0.20元</p>
+                    <p class="date-user">小钢炮</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+</div>
+
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".order-income-nav").ready(function(){
+           $(".borderLine").css("width",$(".order-income-nav a").width()+"px");
+        });
+
+        $(".order-income-nav a").click(function(){
+            $(this).addClass("active").siblings().removeClass("active");
+            $(".borderLine").css({"transition":"all .4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s","webkitTransition":"all .4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s","left":$(".order-income-nav a").width()*$(this).index()+"px"});
+        });
+    });
+</script>
+</body>
+</html>

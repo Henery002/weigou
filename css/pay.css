@@ -1,0 +1,20 @@
+@charset "utf-8";
+.circle-angle{background: url("../images/circle-angle.png") center center no-repeat;background-size: contain;}
+.on .circle-angle{background: url("../images/circle-angle-orange.png")center center no-repeat;background-size: contain;}
+.pay-pane{margin:1rem auto;border-bottom: none;}
+.order-preferential-title .order-preferential-left em{float:left;line-height: 2.2rem;}
+.pay-icon{display: block;width:2.2rem;height: 2.2rem;float:left;margin-right: 0.5rem;}
+.pay-icon-aliPay{background: url("../images/aliPay.png") center center no-repeat;background-size: contain;}
+.pay-icon-weiPay{background: url("../images/weiPay.png") center center no-repeat;background-size: contain;}
+.pay-btn{display: block;margin:2rem 1rem; width:auto;height: 4.4rem;background: #ff6138;text-align: center;font-size: 1.3rem;line-height:4.4rem;border-radius: 0.3rem;-webkit-border-radius: 0.3rem;-moz-border-radius: 0.3rem;}
+.pay-btn a{color: #fff;}
+
+
+/*支付结果*/
+.pay-result-pane{margin: 1rem auto;width:auto;height: auto;padding-top: 5.15rem;padding-bottom: 5.15rem;}
+.pay-result{display: block;margin:0 auto;width:3rem;height: 3rem;}
+.pay-result-failed{background: url("../images/payFailed.png") center center no-repeat;background-size: contain;}
+.pay-result-success{background: url("../images/paySuccess.png") center center no-repeat;background-size: contain;}
+.pay-result-warning{background: url("../images/payWarning.png") center center no-repeat;background-size: contain;}
+.pay-result-txt{color:#c9caca;text-align: center;font-size:1.3rem;margin-top:1.2rem;}
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/public.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/category.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/profile.css" media="screen"/>
+    <title>收货信息</title>
+</head>
+<body>
+<!--首页头部-->
+<div class="fixOn">
+    <div class="index-head bgColorWhite">
+        <a href="javascript:history.back();" class="menu-left"><i class="ico ico-back"></i></a>
+        <div class="menu-mid">
+            <span class="head-title">收货信息</span>
+        </div>
+        <a href="javascript:void(0);" class="menu-right"><i class="ico ico-zoom-back"></i></a>
+    </div>
+    <span class="underLine"></span>
+</div>
+
+<div class="category-wrap-all paddingB">
+    <div class="address-box bgColorWhite padding10">
+        <div class="address-box-item">
+            <span class="check-box"><i class="icon icon-radio"></i><input type="radio" name="address"/></span>
+            <a href="alt-adr.html">
+                <p class="r-info"><span class="r-name">二爷</span><span class="r-mobile">18858747784</span></p>
+
+                <p class="r-addr">浙江省台州市椒江区金茂中心4楼404室</p>
+                <span class="arrow-right"><i class="icon icon-angle-right"></i></span>
+            </a>
+        </div>
+    </div>
+    <div class="address-box bgColorWhite padding10 active borderLineNone">
+        <div class="address-box-item">
+            <span class="check-box"><i class="icon icon-radio"></i><input type="radio" name="address"/></span>
+            <a href="alt-adr.html">
+                <p class="r-info"><span class="r-name">二爷</span><span class="r-mobile">18858747784</span></p>
+                <p class="r-addr">浙江省台州市椒江区金茂中心4楼404室</p>
+                <span class="arrow-right"><i class="icon icon-angle-right"></i></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!--底部导航栏-->
+<div class="footer">
+    <a href="add-adr.html" class="add-r-info">增加收货信息</a>
+</div>
+
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $(".check-box").click(function () {
+            $(this).parents(".address-box").addClass("active").siblings().removeClass("active");
+			//TODO
+        });
+    });
+</script>
+</body>
+</html>

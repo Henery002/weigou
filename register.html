@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"  />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta name="format-detection" content="telphone=no,email=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/public.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/cart.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/counts.css" media="screen" />
+    <style type="text/css">
+        :-moz-placeholder{color:#ddd;line-height: 1.6rem;font-size:1.2rem;}
+        ::-webkit-input-placeholder{color:#ddd;line-height: 1.6rem;font-size:1.2rem;}
+        :-ms-input-placeholder{color:#ddd;line-height: 1.6rem;font-size:1.2rem;}
+    </style>
+    <title>创建账户</title>
+</head>
+<body class="bgColorWhite">
+<div class="index-head bgColorWhite">
+    <a href="javascript:history.back();" class="menu-left"><i class="ico ico-back-arrow"></i></a>
+    <div class="menu-mid">
+        <span class="head-title">创建账户</span>
+    </div>
+    <a href="javascript:void(0);" class="menu-right"><i class="ico ico-zoom-back"></i></a>
+</div>
+<div class="count-wrap ">
+    <form action="" method="post" role="form">
+        <div class="padding21 ">
+            <div class="count-input-info-pane marginB1rem error">
+                <i class="ico-count ico-mobile"></i>
+                <input type="text" name="mobile" placeholder="手机号码" maxlength="11" />
+                <a href="javascript:void(0);" class="sendBtn">点此发送</a>
+            </div>
+            <div class="count-input-info-pane marginB1rem error">
+                <i class="ico-count ico-sms"></i>
+                <input type="text" name="mobile" placeholder="验证码" maxlength="6"/>
+            </div>
+            <div class="count-input-info-pane error">
+                <i class="ico-count ico-pwd"></i>
+                <input type="password" name="mobile" placeholder="密码" minLength="6"  maxlength="16"/>
+            </div>
+        </div>
+        <div class="count-btn-pane padding21">
+            <a href="javascript:void(0);" class="bgColorOrange loginBtn">登录账号</a>
+        </div>
+    </form>
+    <div class="count-markup padding21">
+        <div class="count-markup-content">
+            <span class="titleLine"></span>
+            <span class="titleName">Or</span>
+            <span class="titleLine pull-right"></span>
+        </div>
+    </div>
+    <div class="count-btn-pane  padding21" >
+        <a href="register.html" class="txt-666 count-create bgColorLightGray">创建账号</a>
+    </div>
+</div>
+<div class="count-btn-pane padding21" style="width:100%; text-align: center;">
+    <a href="" class="txt-ddd"><i class="icon-radio"><input type="checkbox" name="agree" class="agreement" style="width:1.5rem;height: 1.5rem;opacity: 0;" /></i>平台隐私政策及服务条款</a>
+</div>
+
+<!--遮罩层-->
+<div class="register-layer">
+    <div class="note-msg-pane">
+        <div class="wrap bgColorWhite padding10">
+            <div class="note-msg-header" style=color:#666;>创建账户提示</div>
+            <div class="note-msg-content" style="color:#999;">短信验证未通过,请重新输入四位验证数字。</div>
+            <div class="note-btn"><a href="javascript:void(0);" style=color:#ddd;>放弃创建</a><a
+                    href="javascript:void(0);" class="confrm-btn" style="color:#ff6138;">再次输入</a></div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var timer = "",speed=1000,idx = 0,nds = $(".count-input-info-pane .sendBtn");
+        //发送验证码
+        nds.click(function(){
+             if(!$(this).hasClass("clickAniamte")){
+                 clearInterval(timer);
+                 $(this).addClass("clickAniamte");
+                 $(this).html("<span style='color: #999;'><em>10</em>s</span>");
+                 timer = setInterval(function(){idx=parseInt($("em",nds).html());idx--;$("em",nds).html(idx);
+                     if(idx==0){
+                         clearInterval(timer);
+                         nds.addClass("clickAniamteRecover");
+                         nds.html("重新发送");
+                         setTimeout(function(){nds.removeClass("clickAniamteRecover").removeClass("clickAniamte")},speed);
+                     }
+                 },speed);
+             }
+        });
+
+        $(".agreement").click(function(){
+            if($(this).is(":checked")){
+                $(".count-btn-pane a.txt-ddd .icon-radio").css("backgroundImage","url('./images/chekcBoxed.png')");
+            }else{
+                $(".count-btn-pane a.txt-ddd .icon-radio").css("backgroundImage","url('./images/chekcBox.png')");
+            }
+        })
+
+
+
+    });
+</script>
+</body>
+</html>

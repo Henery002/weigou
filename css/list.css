@@ -1,0 +1,31 @@
+﻿@charset "utf-8";
+.wrap-all{padding-top: 8.8rem;}
+.category-nav{width:auto;height: auto;border-bottom: 1px solid #f1f1f1; display:box;display:-webkit-box;display:-moz-box;}
+.category-nav .category-nav-item{box-flex:1;-webkit-box-flex:1;-moz-box-flex:1;position: relative; height:4.4rem;padding-top: 1.1rem;padding-bottom: 1.1rem;text-align: center;color: #aaa;font-size:1.2rem;}
+.category-nav .category-nav-item span{display: block;height: 2.2rem;line-height: 2.2rem;border-right: 1px solid #f1f1f1;}
+.borderR{border-right: 1px solid transparent !important;}
+.category-nav .category-nav-item .ico{font-size:1.5rem;display: inline !important;}
+
+/*add 20160812*/
+.category-list-item-sub{display: none; position: absolute;top:4.4rem;left:0;width:100%;max-height: 22rem;background: rgba(255,255,255,1);overflow-x: hidden;overflow-y: scroll;}
+.category-list-item-sub li{width:100%;height: 4.4rem;padding:1.6rem 0;border-bottom: 1px solid #f1f1f1;}
+.category-list-item-sub li a{display: block; color:#aaa;}
+.category-list-item-sub li.active{background: #ff6138;}
+.category-list-item-sub li.active a{color:#fff;}
+
+/*分类内容展示*/
+.category-list-item{display: box;display: -webkit-box;display: -moz-box;padding-top:1.1rem;padding-bottom: 1.1rem;width:auto;height: auto;box-orient:horizontal ;-webkit-box-orient:horizontal ;-moz-box-orient:horizontal ;-o-box-orient:horizontal ;border-bottom:1px solid #f1f1f1 !important;}
+.category-list-item-left{display: block;width:8.8rem;height:8.8rem;overflow: hidden;}
+.category-list-item-left img{display: block;max-width: 100%;height: auto;}
+.category-list-item-right{box-flex:1;-moz-box-flex:1;-webkit-box-flex:1;overflow: hidden;margin-left: 11px;}
+.pro-name{color:#5c5c5c;font-size:1.2rem;line-height: 1.5rem;overflow: hidden;display: -webkit-box; -webkit-line-clamp: 2;-webkit-box-orient: vertical;word-break: break-all;}
+.pro-price{font-size:1rem;color:#ff6138;padding-top:1.575rem;padding-bottom: 1.575rem;}
+.pro-price>em{font-size:1.2rem;line-height: 1.2rem;}
+.pro-other{color:#aaa;font-size:1.2rem;}
+.pro-left{float:left;}
+.pro-right{float:right;}
+
+
+/* add 20160812*/
+/*遮罩层*/
+.list-layer{display: none; position: fixed;top:0;left:0;z-index:9997;width:100%;height: 100%;background: rgba(0,0,0,.1);}

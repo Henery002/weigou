@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/public.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/order.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/pay.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css" media="screen"/>
+    <title>支付方式</title>
+</head>
+<body>
+<!--首页头部-->
+<div class="fixOn">
+    <div class="index-head bgColorWhite">
+        <a href="javascript:history.back();" class="menu-left"><i class="ico ico-back"></i></a>
+
+        <div class="menu-mid">
+            <span class="head-title">微购收银台</span>
+        </div>
+        <a href="" class="menu-right"><i class="ico ico-zoom-back"></i></a>
+    </div>
+    <span class="underLine"></span>
+</div>
+<div class="wrap-all">
+    <div class="order-preferential bgColorWhite padding10 pay-pane">
+        <div class="order-preferential-title">
+            <span class="order-preferential-left">选择支付途径</span>
+            <span class="order-preferential-right"><i class="ico icon-angle-down"></i></span>
+        </div>
+    </div>
+
+    <div class="order-preferential bgColorWhite padding10 pay-way">
+        <div class="order-preferential-title pay-way-item">
+            <span class="order-preferential-left"><i class="pay-icon pay-icon-aliPay"></i><em
+                    style="color:#aaa;">支付宝支付</em></span>
+            <span class="order-preferential-right"><i class="ico circle-angle" style="margin-top:8px;"></i><input
+                    type="radio" name="payMoment" class="payMoment"/></span>
+        </div>
+        <div class="order-preferential-title pay-way-item on">
+            <span class="order-preferential-left"><i class="pay-icon pay-icon-weiPay"></i><em
+                    style="color:#aaa;">微信支付</em></span>
+            <span class="order-preferential-right"><i class="ico circle-angle" style="margin-top:8px;"></i><input
+                    type="radio" name="payMoment" class="payMoment"/></span>
+        </div>
+    </div>
+
+    <div class="pay-btn"><a href="evaluation.html">确认支付</a></div>
+
+
+    <!-- 新增支付结果  -->
+    <div class="pay-result-pane bgColorWhite padding10">
+        <!--样式说明 pay-result-failed 支付失败 pay-result-success支付成功 pay-result-warning 支付警告-->
+      <p><i class="pay-result pay-result-failed"></i></p>
+      <p class="pay-result-txt">支付失败，请重新支付！</p>
+    </div>
+
+    <!--猜你喜欢-->
+    <div class="guess-u-love ">
+        <div class="content-title padding10">
+            <div class="title-line f-left"></div>
+            <div class="title-txt f-left" style="color:#aaa;">猜你喜欢</div>
+            <div class="title-line f-right"></div>
+        </div>
+        <div class="guess-content-list padding10">
+            <a href="" class="guess-content-item paddingR">
+                <img src="images/item01.jpg" alt="夏威夷坚果"/>
+
+                <div class="info-wrap padding10">
+                    <p class="item-name">夏威夷坚果夏威夷坚果夏威夷坚果</p>
+
+                    <p class="item-price"><em>¥</em>258.46</p>
+                </div>
+            </a>
+            <!--guess-content-item-->
+            <a href="" class="guess-content-item paddingL">
+                <img src="images/item02.jpg" alt="夏威夷坚果"/>
+
+                <div class="info-wrap padding10">
+                    <p class="item-name">夏威夷坚果夏威夷坚果夏威夷坚果</p>
+
+                    <p class="item-price"><em>¥</em>258.46</p>
+                </div>
+            </a>
+            <!--guess-content-item-->
+            <a href="" class="guess-content-item paddingR">
+                <img src="images/item03.jpg" alt="夏威夷坚果"/>
+
+                <div class="info-wrap padding10">
+                    <p class="item-name">夏威夷坚果夏威夷坚果夏威夷坚果</p>
+
+                    <p class="item-price"><em>¥</em>258.46</p>
+                </div>
+            </a>
+            <!--guess-content-item-->
+            <a href="" class="guess-content-item paddingL">
+                <img src="images/item04.jpg" alt="夏威夷坚果"/>
+
+                <div class="info-wrap padding10">
+                    <p class="item-name">夏威夷坚果夏威夷坚果夏威夷坚果</p>
+
+                    <p class="item-price"><em>¥</em>258.46</p>
+                </div>
+            </a>
+            <!--guess-content-item-->
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var nds = $(".pay-way .pay-way-item");
+        nds.click(function () {
+            $(this).css("background", "rgba(255,255,255,0)");
+            $(this).addClass("on").siblings(".pay-way-item").removeClass("on");
+        });
+    });
+</script>
+</html>

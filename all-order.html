@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/public.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/order.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/details.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/category.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/profile.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/cart.css" media="screen"/>
+    <title>全部订单</title>
+</head>
+<body>
+<!--首页头部-->
+<div class="fixOn">
+    <div class="index-head bgColorWhite">
+        <a href="javascript:history.back();" class="menu-left"><i class="ico ico-back"></i></a>
+
+        <div class="menu-mid">
+            <span class="head-title">全部订单</span>
+        </div>
+        <a href="javascript:void(0);" class="menu-right"><i class="ico ico-zoom-back"></i></a>
+    </div>
+    <!--导航栏-->
+    <div class="bgColorWhite padding10 all-order">
+        <a href="javascript:void(0);">待支付</a><a href="javascript:void(0);">待签收</a><a
+            href="javascript:void(0);">待评价</a><a href="javascript:void(0);">已完成</a>
+        <span class="borderLine"></span>
+    </div>
+</div>
+
+<div class="wrap-all-order">
+    <!--购物篮主体-->
+    <div class="order-goods  cart-box" data-id="bcshop001" id="bcshop001">
+        <div class="order-goods-title bgColorWhite padding10">
+            <span class="order-shop">福建百草味坚果炒货直营店</span>
+            <a href="javascript:void(0);" class="order-altBtn"><i class="order-ico-delete" style="margin-right: 0"></i></a>
+        </div>
+        <div class="shop-wrap bgColorWhite padding10">
+            <div class="cart-info-pane">
+                <span class="img-box paddingL" style="width:8.8rem"><!--<i class="align-mid ico-arrow ico-arrow-down"></i><input type="checkbox" name="chooseItem" class="align-mid"/>--> <img
+                        src="images/list-01.jpg"/></span>
+                <a href="">
+                    <div class="info-box" style="padding-left:9.8rem">
+                        <p class="proName">百草味澳洲特产原味夏威夷果炒货零食1500克限量特卖百草味澳洲特产原味夏威夷果炒货零食1500克限量特卖</p>
+
+                        <p class="price"><em>¥</em>2588.6</p>
+
+                        <p class="addr-info"><span class="left">免运费</span><span class="right">深圳 福田</span></p>
+                    </div>
+                </a>
+            </div>
+            <div class="order-cart">
+                <span class="order-pro-name col33">佛陀唇膏</span>
+                <span class="order-pro-standard col33">活力玫</span>
+                <span class="order-pro-btnPane col33">x<em class="number">2</em><input type="text" class="alt-number"
+                                                                                       value="" onblur="altNow(this)"/></span>
+            </div>
+            <div class="order-goods-title borderLineNone">
+                <a class="pay-btn" href="pay.html">支付</a><a class="pay-btn borderLineGray" href="order-detail.html">订单详情</a>
+            </div>
+        </div>
+    </div>
+
+    <!--购物篮主体-->
+    <div class="order-goods  cart-box" data-id="bcshop003" id="bcshop003">
+        <div class="order-goods-title bgColorWhite padding10">
+            <span class="order-shop">福建百草味坚果炒货直营店</span>
+            <a href="javascript:void(0);" class="order-altBtn"><i class="order-ico-delete" style="margin-right: 0"></i></a>
+        </div>
+        <div class="shop-wrap bgColorWhite padding10">
+            <div class="cart-info-pane">
+                <span class="img-box paddingL" style="width:8.8rem"><!--<i class="align-mid ico-arrow ico-arrow-down"></i><input type="checkbox" name="chooseItem" class="align-mid"/>--> <img
+                        src="images/list-01.jpg"/></span>
+                <a href="">
+                    <div class="info-box" style="padding-left:9.8rem">
+                        <p class="proName">百草味澳洲特产原味夏威夷果炒货零食1500克限量特卖百草味澳洲特产原味夏威夷果炒货零食1500克限量特卖</p>
+
+                        <p class="price"><em>¥</em>2588.6</p>
+
+                        <p class="addr-info"><span class="left">免运费</span><span class="right">深圳 福田</span></p>
+                    </div>
+                </a>
+            </div>
+            <div class="order-cart">
+                <span class="order-pro-name col33">佛陀唇膏</span>
+                <span class="order-pro-standard col33">活力玫</span>
+                <span class="order-pro-btnPane col33">x<em class="number">2</em><input type="text" class="alt-number"
+                                                                                       value="" onblur="altNow(this)"/></span>
+            </div>
+            <div class="order-goods-title borderLineNone">
+                <a class="pay-btn" href="pay.html">支付</a><a class="pay-btn borderLineGray" href="order-detail.html">订单详情</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--删除警告弹出层-->
+<div class="customer-layer delete-note">
+    <div class="note-msg-pane">
+        <div class="wrap padding10 bgColorWhite">
+            <div class="note-msg-header">微购提示</div>
+            <div class="note-msg-content">确定要删除该商品么？</div>
+            <div class="note-btn"><a href="javascript:void(0);" onclick="btnCancle(this)">取消</a><a
+                    href="javascript:void(0);" class="confrm-btn" onclick="del(this)">确定</a></div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $(".all-order a").click(function () {
+            $(".borderLine").stop().animate({"left": $(this).index() * 25 + "%"}, 200, "easeOutExpo");
+        });
+
+        //遮罩层
+        $(".order-goods .order-ico-delete").each(function () {
+            //删除按钮动作
+            $(this).bind("click", function () {
+                $(".confrm-btn").attr("curShopId", $(this).parents(".cart-box").data("id"));
+                $(".delete-note").show().bind('touchmove', function (e) {
+                    e.preventDefault()
+                });
+                $(".delete-note").stop().animate({"bottom": "0"}, 400);
+            });
+        });
+
+        //点击关闭遮罩层
+        $(".delete-note").click(function (f) {
+            var ev = window.event || f, obj = $(ev.srcElement || ev.target);
+            if (obj.attr('class') == 'customer-layer delete-note')
+                $(".delete-note").stop().animate({"bottom": "-55rem"}, 300, function () {
+                    $(".delete-note").hide().unbind('touchmove');
+                });
+        });
+
+    })
+
+    //取消
+    function btnCancle() {
+        $(".delete-note").stop().animate({"bottom": "-55rem"}, 300, function () {
+            $(".delete-note").hide().unbind('touchmove');
+        });
+    }
+    //确定
+    function del(idx) {
+        $("#" + $(idx).attr("curShopId")).remove();
+        $(".delete-note").stop().animate({"bottom": "-55rem"}, 300, function () {
+            $(".delete-note").hide().unbind('touchmove');
+        });
+    }
+
+</script>
+</body>
+</html>

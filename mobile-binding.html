@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/public.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/category.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/profile.css" media="screen"/>
+    <title>手机绑定</title>
+</head>
+<body>
+<!--首页头部-->
+<div class="fixOn">
+    <div class="index-head bgColorWhite">
+        <a href="javascript:history.back();" class="menu-left"><i class="ico ico-back"></i></a>
+        <div class="menu-mid">
+            <span class="head-title">手机绑定</span>
+        </div>
+        <a href="javascript:void(0);" class="menu-right"><i class="ico ico-zoom-back"></i></a>
+    </div>
+    <span class="underLine"></span>
+</div>
+<div class="category-wrap-all paddingB padding10">
+    <form method="post" action="">
+        <div class="bgColorWhite add-adr-floor marginB1rem">
+            <input type="text" name="mobile" class="binding-input" placeholder="输入手机号码"/>
+            <a href="javascript:void(0);" class="get-code-btn"><span class="times"><em>60</em>s</span>点击获取验证码</a>
+        </div>
+        <div class="bgColorWhite add-adr-floor marginB1rem">
+            <input type="text" name="msgCode" placeholder="输入短信验证码"/>
+        </div>
+        <div class="">
+            <a href="javascript:void(0);" class="subfrm-btn">确定绑定</a>
+        </div>
+    </form>
+</div>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+    var timer="",delayTime = 6000;
+    var nds = $(".get-code-btn");
+    $(function(){
+        nds.bind('click',function(){fun()});
+    });
+    function fun(){
+        delayTime = parseInt($(".times em",nds).html())*1000;
+        nds.html("<span class='times'><em>60</em>s</span>后再次获取");
+        nds.addClass("disabled-Btn");
+        $(".times",nds).show();
+        nds.unbind('click');
+        countDown();
+        setTimeout('binding()',delayTime);
+    }
+
+    function binding(){
+        nds.html("<span class='times'><em>60</em>s</span>点击获取验证码");
+        nds.removeClass("disabled-Btn");
+        $(".times",nds).hide();
+        nds.bind('click',function(){fun()});
+    }
+
+    function countDown(){
+        setInterval(function(){
+            $(".times em",nds).html(parseInt($(".times em",nds).html())-1);
+        },1000);
+    }
+
+</script>
+</body>
+</html>

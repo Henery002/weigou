@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="x5-orientation" content="portrait">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <link rel="stylesheet" type="text/css" href="css/public.css" media="screen">
+    <style type="text/css">
+        body{background: #ffe401;}
+        ::-moz-placeholder{color: #ff7961;}
+        :-ms-input-placeholder{color: #ff7961;}
+        ::-webkit-input-placeholder{color: #ff7961;}
+
+        .vote-input{position: relative;}
+        .vote-input-pane{position: absolute;top:0;left:50%;margin-left: -2.94rem; width: 5.88rem;height: 0.78rem;}
+        .vote-input-pane input{width: 100%;height: 0.78rem;background: rgba(255,255,255,.6);float:left;-webkit-border-radius: 4px;-moz-border-radius: 4px;-o-border-radius: 4px;padding: 0.1rem 1.3rem 0.1rem 0.36rem;}
+        .searchBtn{position: absolute;right: 0.1rem;top:0.1rem; display: block;width:1.1rem;height: 0.58rem;font-size: 0.24rem;line-height: 0.58rem;text-align: center;color: #fff;background: #ff7961;-webkit-border-radius: 4px;-moz-border-radius: 4px;-o-border-radius: 4px;}
+        /*投票列表样式*/
+        .vote-pane{width: auto;height: auto;overflow: hidden;padding: 0 0.2rem;}
+        .vote-item-box{width: 3.55rem;height: auto;float:left;margin-top: 0.2rem;}
+        .p-l-R{padding-right: 0.1rem;}
+        .p-l-L{padding-left: 0.1rem;}
+        .vote-items{width: auto;height: auto;background: #fff;-webkit-border-radius: 4px;-moz-border-radius: 4px;-o-border-radius:4px;border-radius: 4px;overflow: hidden;padding-bottom: 0.11rem;}
+        .baby-img{position: relative;}
+        .v-i-icon{position: absolute;top:0.13rem;left:0.16rem;width: 0.74rem;height: 0.74rem;border-radius: 100%;-webkit-border-radius: 100%;-moz-border-radius: 100%;}
+        .v-champion{background: url("images/champion.png") #ec0c0c center center no-repeat;background-size: contain;}
+        .baby-name{width: auto;height: 0.6rem;padding: 0 0.2rem;font-size: 0.26rem;line-height: 0.6rem;color: #ff5c47;text-align: left;font-family:"microsoft yahei"}
+        .vote-btn{position: relative; width:auto;height: 0.58rem;overflow: hidden;font-size: 0.24rem;line-height: 0.58rem;color: #9f1908;padding: 0 0.2rem;}
+        .voting{position: absolute;right: 0.2rem;top: 0; display: block;width:1.68rem;height: 0.58rem;-webkit-border-radius: 4px;-moz-border-radius: 4px;-o-border-radius: 4px; padding-left: 0.6rem;background:  #ec0841;color: #fff;font-size: 0.3rem;}
+        .v-icon{position: absolute;left: 0.1rem;top: 0.1rem; display: block;width: 0.35rem;height: 0.35rem;line-height: 0.58rem; background: url("images/voting.png") center center no-repeat;background-size: contain;}
+        .v-footer{width: auto;height: 0.98rem;background: #ff5c47;padding: 0.14rem 0.2rem; }
+        .v-footer a{float:left; display: block;width: 2.36rem;height:0.7rem;font-size: 0.36rem;color: #fff;line-height: 0.7rem;text-align: center; border-right: 1px solid #fff;}
+        .v-layer{display: none; position: fixed;z-index: 9999; top:0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.5)}
+        .v-close-btn{position: absolute;top: 1.78rem;right: 0.96rem; display: block;width: 0.66rem;height: 0.66rem;}
+        .v-msg-pane{position: absolute;top:3.57rem;left: 50%;margin-left: -3.2rem; width: 6.4rem;height: 4.55rem;}
+        .voting-btns{position: absolute;bottom:0.62rem;left: 50%;width: 2.4rem;height: 0.58rem; margin-left: -1.2rem; background: url("images/viting-btn.jpg") center center no-repeat;background-size: contain;}
+        .v-footer a.marginR{border-right: 0 !important;}
+    </style>
+    <title>投票</title>
+</head>
+<body>
+<div>
+    <img src="images/vote01.jpg" class="img-responsive" />
+</div>
+
+<div class="vote-input">
+    <div class="vote-input-pane">
+        <input type="text" name="usernameOrId"  maxlength="25"  placeholder="输入选手的编号或姓名" /><a href="" class="searchBtn">搜索</a>
+    </div>
+    <img src="images/vote02.jpg" class="img-responsive">
+</div>
+
+<div class="vote-pane">
+   <div class="vote-item-box p-l-R">
+     <div class="vote-items">
+         <p class="baby-img"><i class="v-i-icon v-champion"></i><img src="images/baby.jpg" class="img-responsive" /></p>
+         <p class="baby-name">1号萌宝：小翠花</p>
+         <p class="vote-btn"><span>156票</span><a href="" class="voting"><i class="v-icon"></i>投票</a></p>
+     </div>
+   </div>
+    <!--vote-item-box-->
+    <div class="vote-item-box p-l-L">
+        <div class="vote-items">
+            <p class="baby-img"><img src="images/baby.jpg" class="img-responsive" /></p>
+            <p class="baby-name">1号萌宝：小翠花</p>
+            <p class="vote-btn"><span>156票</span><a href="" class="voting"><i class="v-icon"></i>投票</a></p>
+        </div>
+    </div>
+    <!--vote-item-box-->
+    <div class="vote-item-box p-l-R">
+        <div class="vote-items">
+            <p class="baby-img"> <img src="images/baby.jpg" class="img-responsive" /></p>
+            <p class="baby-name">1号萌宝：小翠花</p>
+            <p class="vote-btn"><span>156票</span><a href="" class="voting"><i class="v-icon"></i>投票</a></p>
+        </div>
+    </div>
+    <!--vote-item-box-->
+    <div class="vote-item-box p-l-L">
+        <div class="vote-items">
+            <p class="baby-img"><img src="images/baby.jpg" class="img-responsive" /></p>
+            <p class="baby-name">1号萌宝：小翠花</p>
+            <p class="vote-btn"><span>156票</span><a href="" class="voting"><i class="v-icon"></i>投票</a></p>
+        </div>
+    </div>
+    <!--vote-item-box-->
+    <div class="vote-item-box p-l-R">
+        <div class="vote-items">
+            <p class="baby-img"><img src="images/baby.jpg" class="img-responsive" /></p>
+            <p class="baby-name">1号萌宝：小翠花</p>
+            <p class="vote-btn"><span>156票</span><a href="" class="voting"><i class="v-icon"></i>投票</a></p>
+        </div>
+    </div>
+    <!--vote-item-box-->
+    <div class="vote-item-box p-l-L">
+        <div class="vote-items">
+            <p class="baby-img"><img src="images/baby.jpg" class="img-responsive" /></p>
+            <p class="baby-name">1号萌宝：小翠花</p>
+            <p class="vote-btn"><span>156票</span><a href="" class="voting"><i class="v-icon"></i>投票</a></p>
+        </div>
+    </div>
+    <!--vote-item-box-->
+    <div class="vote-item-box p-l-R">
+        <div class="vote-items">
+            <p class="baby-img"><img src="images/baby.jpg" class="img-responsive" /></p>
+            <p class="baby-name">1号萌宝：小翠花</p>
+            <p class="vote-btn"><span>156票</span><a href="" class="voting"><i class="v-icon"></i>投票</a></p>
+        </div>
+    </div>
+    <!--vote-item-box-->
+    <div class="vote-item-box p-l-L">
+        <div class="vote-items">
+            <p class="baby-img"><img src="images/baby.jpg" class="img-responsive" /></p>
+            <p class="baby-name">1号萌宝：小翠花</p>
+            <p class="vote-btn"><span>156票</span><a href="" class="voting"><i class="v-icon"></i>投票</a></p>
+        </div>
+    </div>
+    <!--vote-item-box-->
+</div>
+
+<div>
+    <img src="images/vote03.jpg" class="img-responsive" />
+</div>
+
+<div>
+    <img src="images/vote04.jpg" class="img-responsive" />
+</div>
+
+<!--底部导航栏-->
+<div class="v-footer">
+   <a href="">活动规则</a>
+   <a href="">奖品设置</a>
+   <a href="javascript:void(0);" class="getWards marginR">如何领奖</a>
+</div>
+
+<!--页面遮罩层-->
+<div class="v-layer">
+    <a href="javascript:void(0);" class="v-close-btn"><img src="images/v-close.png" class="img-responsive" /></a>
+    <!-- <div class="v-msg-pane"><img src="images/v-msg-pane.png" class="img-responsive" /></div>-->
+    <!--另一个分享-->
+    <div class="v-msg-pane"><img src="images/v-msg-pane02.png" class="img-responsive" /><a href="javascript:void(0);" class="voting-btns"></a></div>
+</div>
+
+
+<script src="js/size.js"></script>
+<script src="js/zepto.min.js"></script>
+<script type="text/javascript">
+    $(".v-close-btn").on('touchend', function () {
+        $('.v-layer').hide();
+    })
+
+    $(".getWards").on('touchend',function(){
+        $('.v-layer').show();
+    });
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/public.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/order.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/details.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/cart.css" media="screen"/>
+    <title>购物篮</title>
+</head>
+<body>
+<!--首页头部-->
+<div class="fixOn">
+    <div class="index-head bgColorWhite">
+        <a href="javascript:history.back();" class="menu-left"><i class="ico ico-back"></i></a>
+        <div class="menu-mid">
+            <span class="head-title">购物篮</span>
+        </div>
+        <a href="javascript:void(0);" class="menu-right"><i class="ico ico-zoom-back"></i></a>
+    </div>
+    <span class="underLine"></span>
+</div>
+<!--购物篮主体内容-->
+<div class="wrap-all">
+    <!--购物车空空如也-->
+   <!--<div class="cart-empty">
+       <p class="cart-empty-txt">购物车都饿瘪了，赶紧去调点好货吧</p>
+       <p class="cart-empty-btn"><a href="" >去逛逛</a></p>
+   </div>-->
+
+    <!--购物篮主体-->
+    <div class="order-goods cart-box" data-id="bcshop001" id="bcshop001">
+        <div class="order-goods-title bgColorWhite padding10">
+            <span class="order-shop">天艺数码商城天艺数码商城天艺数码商城天艺数码商城天艺数码商城</span>
+            <a href="javascript:void(0);" class="order-altBtn"><i class="order-ico-delete" style="margin-right: 0"></i></a>
+        </div>
+        <div class="shop-wrap bgColorWhite padding10">
+            <div class="cart-info-pane ">
+                <span class="img-box"><i class="align-mid ico-arrow ico-arrow-down"></i><input type="checkbox"
+                                                                                               name="chooseItem"
+                                                                                               class="align-mid"/> <img
+                        src="images/list-01.jpg"/></span>
+                
+                    <div class="info-box">
+                        <a href="details.html"><p class="proName">百草味澳洲特产原味夏威夷果炒货零食1500克限量特卖百草味澳洲特产原味夏威夷果炒货零食1500克限量特卖</p>  </a>
+
+                        <p class="price"><em>¥</em>2588.6</p>
+
+                        <p class="addr-info"><span class="left">运费待商议</span><span class="right">深圳 福田</span></p>
+                    </div>
+              
+            </div>
+            <div class="order-cart">
+                <span class="order-pro-name">奶昔奶茶</span>
+                <span class="order-pro-standard">500mL</span>
+                <span class="order-pro-standard col-price">¥<em>12.5</em></span>
+                <span class="order-pro-btnPane"><span class="btn-pane"><a href="javascript:void(0);"
+                                                                          onclick="minus(this)">-</a><input type="text"
+                                                                                                            name="counts"
+                                                                                                            value="5"
+                                                                                                            maxlength="3"
+                                                                                                            class="order-input"
+                                                                                                            onblur="blurs(this)"/><a
+                        href="javascript:void(0);" onclick="plus(this)">+</a></span></span>
+            </div>
+            <div class="order-cart">
+                <span class="order-pro-name">奶昔奶茶</span>
+                <span class="order-pro-standard">500mL</span>
+                <span class="order-pro-standard col-price">¥<em>12.5</em></span>
+                <span class="order-pro-btnPane"><span class="btn-pane"><a href="javascript:void(0);"
+                                                                          onclick="minus(this)">-</a><input type="text"
+                                                                                                            name="counts"
+                                                                                                            value="8"
+                                                                                                            maxlength="3"
+                                                                                                            class="order-input"
+                                                                                                            onblur="blurs(this)"/><a
+                        href="javascript:void(0);" onclick="plus(this)">+</a></span></span>
+            </div>
+            <div class="order-cart">
+                <span class="order-pro-name">奶昔奶茶</span>
+                <span class="order-pro-standard">500mL</span>
+                <span class="order-pro-standard col-price">¥<em>12.5</em></span>
+                <span class="order-pro-btnPane"><span class="btn-pane"><a href="javascript:void(0);"
+                                                                          onclick="minus(this)">-</a><input type="text"
+                                                                                                            name="counts"
+                                                                                                            value="35"
+                                                                                                            maxlength="3"
+                                                                                                            class="order-input"
+                                                                                                            onblur="blurs(this)"/><a
+                        href="javascript:void(0);" onclick="plus(this)">+</a></span></span>
+            </div>
+            <!-- <div class="order-cart borderLineNone" >
+                        <span class="order-pro-btnPane" style="float:main"><a href="javascript:void(0);" class="op-btn">删除</a>|<a href=""  class="op-btn active">确定</a></span>
+                    </div>-->
+        </div>
+    </div>
+    <!--order-goods-->
+    <!--购物篮主体-->
+    <div class="order-goods cart-box" data-id="bcshop002" id="bcshop002">
+        <div class="order-goods-title  bgColorWhite padding10">
+            <span class="order-shop">鼎讯通信鼎讯通信鼎讯通信鼎讯通信鼎讯通信鼎讯通信</span>
+            <a href="javascript:void(0);" class="order-altBtn"><i class="order-ico-delete" style="margin-right: 0"></i></a>
+        </div>
+        <div class="shop-wrap bgColorWhite padding10">
+            <div class="cart-info-pane ">
+                <span class="img-box"><i class="align-mid ico-arrow ico-arrow-down"></i><input type="checkbox"
+                                                                                               name="chooseItem"
+                                                                                               class="align-mid"/> <img
+                        src="images/list-01.jpg"/></span>
+                <a href="">
+                    <div class="info-box">
+                        <p class="proName">百草味澳洲特产原味夏威夷果炒货零食1500克限量特卖百草味澳洲特产原味夏威夷果炒货零食1500克限量特卖</p>
+
+                        <p class="price"><em>¥</em>2588.6</p>
+
+                        <p class="addr-info"><span class="left">免运费</span><span class="right">深圳 福田</span></p>
+                    </div>
+                </a>
+            </div>
+            <div class="order-cart">
+                <span class="order-pro-name col33">佛陀唇膏</span>
+                <span class="order-pro-standard col33">活力玫</span>
+                <span class="order-pro-btnPane col33">x<em class="number">2</em><input type="text" class="alt-number"
+                                                                                       value="" onblur="altNow(this)"/></span>
+            </div>
+            <div class="order-goods-title borderLineNone">
+                <a href="javascript:void(0);" class="order-altBtn" onclick="altNumber(this)"><i
+                        class="order-ico"></i><em>修改</em></a>
+            </div>
+        </div>
+    </div>
+    <!--order-goods-->
+    <!--购物篮主体-->
+    <div class="order-goods  cart-box" data-id="bcshop003" id="bcshop003">
+        <div class="order-goods-title bgColorWhite padding10">
+            <span class="order-shop">福建百草味坚果炒货直营店</span>
+            <a href="javascript:void(0);" class="order-altBtn"><i class="order-ico-delete" style="margin-right: 0"></i></a>
+        </div>
+        <div class="shop-wrap bgColorWhite padding10">
+            <div class="cart-info-pane">
+                <span class="img-box"><i class="align-mid ico-arrow ico-arrow-down"></i><input type="checkbox"
+                                                                                               name="chooseItem"
+                                                                                               class="align-mid"/> <img
+                        src="images/list-01.jpg"/></span>
+                <a href="">
+                    <div class="info-box">
+                        <p class="proName">百草味澳洲特产原味夏威夷果炒货零食1500克限量特卖百草味澳洲特产原味夏威夷果炒货零食1500克限量特卖</p>
+
+                        <p class="price"><em>¥</em>2588.6</p>
+
+                        <p class="addr-info"><span class="left">免运费</span><span class="right">深圳 福田</span></p>
+                    </div>
+                </a>
+            </div>
+            <div class="order-cart">
+                <span class="order-pro-name col33">佛陀唇膏</span>
+                <span class="order-pro-standard col33">活力玫</span>
+                <span class="order-pro-btnPane col33">x<em class="number">2</em><input type="text" class="alt-number"
+                                                                                       value="" onblur="altNow(this)"/></span>
+            </div>
+            <div class="order-goods-title borderLineNone marginB1rem">
+                <a href="javascript:void(0);" class="order-altBtn" onclick="altNumber(this)"><i
+                        class="order-ico"></i><em>修改</em></a>
+            </div>
+        </div>
+        <div class="shop-wrap padding10 bgColorWhite">
+            <div class="cart-info-pane active ">
+                <span class="img-box"><i class="align-mid ico-arrow ico-arrow-down"></i><input type="checkbox"
+                                                                                               name="chooseItem"
+                                                                                               class="align-mid"/> <img
+                        src="images/list-01.jpg"/></span>
+                <a href="">
+                    <div class="info-box">
+                        <p class="proName">百草味澳洲特产原味夏威夷果炒货零食1500克限量特卖百草味澳洲特产原味夏威夷果炒货零食1500克限量特卖</p>
+
+                        <p class="price"><em>¥</em>2588.6</p>
+
+                        <p class="addr-info"><span class="left">免运费</span><span class="right">深圳 福田</span></p>
+                    </div>
+                </a>
+            </div>
+            <div class="order-cart">
+                <span class="order-pro-name col33">佛陀唇膏</span>
+                <span class="order-pro-standard col33">活力玫</span>
+                <span class="order-pro-btnPane col33">x<em class="number">2</em><input type="text" class="alt-number" value="" onblur="altNow(this)"/></span>
+            </div>
+            <div class="order-goods-title borderLineNone">
+                <a href="javascript:void(0);" class="order-altBtn" onclick="altNumber(this)"><i class="order-ico"></i><em>修改</em></a>
+            </div>
+        </div>
+    </div>
+    <!--order-goods-->
+    <!--底部加载-->
+    <div class="footer-hide-loading">
+        <div class="loading-pane"><i class="icon icon-baobao"></i><span>购物篮只有这些哟~...</span></div>
+    </div>
+</div>
+<!--删除确认弹出层-->
+<div class="customer-layer delete-note">
+    <div class="note-msg-pane">
+        <div class="wrap bgColorWhite padding10">
+            <div class="note-msg-header">微购提示</div>
+            <div class="note-msg-content">确定要删除该商品么？</div>
+            <div class="note-btn"><a href="javascript:void(0);" onclick="btnCancle(this)">取消</a><a
+                    href="javascript:void(0);" class="confrm-btn" onclick="del(this)">确定</a></div>
+        </div>
+    </div>
+</div>
+
+<!--底部导航栏-->
+<div class="footer bgColorWhite">
+    <div class="footer-left"><span style="font-size:1.1rem;line-height: 4.4rem;margin-right:0.7rem">付款总计</span><span
+            style="color: #ff6138;font-size:1.5rem;line-height: 4.4rem;"><em style="font-size:1rem;line-height: 4.4rem">¥</em>2588.46</span>
+    </div>
+    <div class="footer-right"><a href="pay.html">去付款</a></div>
+</div>
+
+<!--搜索栏页面-->
+<div class="searchBox-layer">
+    <!--搜索框-->
+    <div class="search-input ">
+        <form action="" method="post" role="form"><input type="text" name="searchName" class="searchKeyWords"
+                                                         placeholder="iPhone 7s Plus"/><span class="cancle-icon"><img
+                src="images/cancle.png"/></span></form>
+    </div>
+    <!--非设计搞样式 后期维护再讨论-->
+    <!--
+     <div class="search-result-pane bgColorWhite padding10">
+    </div>
+    -->
+    <div class="index-love">
+        <div class="content-title padding10">
+            <div class="title-line f-left"></div>
+            <div class="title-txt f-left">大家都喜欢</div>
+            <div class="title-line f-right"></div>
+        </div>
+        <div class="love-markup-pane">
+            <div class="love-btn active"><a href="javascript:void(0);">仙居杨梅</a></div>
+            <div class="love-btn"><a href="javascript:void(0);">夏季男裤</a></div>
+            <div class="love-btn"><a href="javascript:void(0);">仙居杨梅</a></div>
+            <div class="love-btn"><a href="javascript:void(0);">夏季男裤</a></div>
+            <div class="love-btn"><a href="javascript:void(0);">仙居杨梅</a></div>
+            <div class="love-btn"><a href="javascript:void(0);">夏季男裤</a></div>
+            <div class="love-btn"><a href="javascript:void(0);">仙居杨梅</a></div>
+            <div class="love-btn"><a href="javascript:void(0);">夏季男裤</a></div>
+        </div>
+    </div>
+
+    <div class="index-love search-result">
+        <div class="content-title padding10">
+            <div class="title-line f-left"></div>
+            <div class="title-txt f-left">搜索结果</div>
+            <div class="title-line f-right"></div>
+        </div>
+        <div class="result-list padding10">
+            <div class="item-wrap">
+            </div>
+            <p class="less-msg msg">宝宝只能帮您搜到这些了！</p>
+            <a href="" class="more-msg msg">全部搜索结果</a>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+<script src="js/details.js"></script>
+<script src="js/TouchLoading.js"></script>
+<script src="js/search.js"></script>
+<script type="text/javascript">
+    window.onload = function () {
+        searchBox.btnClick($(".menu-right"), $(".searchBox-layer"), $(".cancle-icon"));
+        $(".searchKeyWords").bind('input propertychange', function () {
+            startSearch();
+        });
+
+        var nds = $("body"), layNds = $(".footer-hide-loading");
+        touchLoading.Loading(nds, layNds);
+
+        //遮罩层
+        $(".order-goods .order-ico-delete").each(function () {
+            //删除按钮动作
+            $(this).bind("click", function () {
+                $(".confrm-btn").attr("curShopId", $(this).parents(".cart-box").data("id"));
+                $(".delete-note").show().bind('touchmove', function (e) {
+                    e.preventDefault()
+                });
+                $(".delete-note").stop().animate({"bottom": "0"}, 400);
+            });
+        });
+        //点击关闭遮罩层
+        $(".delete-note").click(function (f) {
+            var ev = window.event || f, obj = $(ev.srcElement || ev.target);
+            if (obj.attr('class') == 'customer-layer delete-note')
+                $(".delete-note").stop().animate({"bottom": "-55rem"}, 300, function () {
+                    $(".delete-note").hide().unbind('touchmove');
+                });
+        });
+        //勾选商品信息栏
+        $(".cart-info-pane").click(function () {
+            if (!$(this).hasClass("active")) {
+                $(this).addClass("active");
+            } else {
+                $(this).removeClass("active");
+            }
+        });
+
+    }
+    //取消
+    function btnCancle() {
+        $(".delete-note").stop().animate({"bottom": "-55rem"}, 300, function () {
+            $(".delete-note").hide().unbind('touchmove');
+        });
+    }
+    //确定
+    function del(idx) {
+        $("#" + $(idx).attr("curShopId")).remove();
+        $(".delete-note").stop().animate({"bottom": "-55rem"}, 300, function () {
+            $(".delete-note").hide().unbind('touchmove');
+        });
+    }
+    //修改
+    function altNumber(ths) {
+        $(".alt-number", $(ths).parents(".shop-wrap")).val($(".number", $(ths).parents(".shop-wrap")).html()).stop().animate({"right": "0"}, 200);
+    }
+    //验证修改
+    function altNow(tis) {
+        var reg = /^[0-9]+$/;
+        if (reg.test($(tis).val())) {
+            $(".number", $(tis).parents(".shop-wrap")).html($(tis).val());
+            $(".alt-number", $(tis).parents(".shop-wrap")).stop().animate({"right": "-55rem"}, 200);
+        } else {
+        }
+    }
+</script>
+</body>
+</html>

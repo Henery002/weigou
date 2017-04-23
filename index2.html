@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="x5-orientation" content="portrait">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="微购一站微信端首页"/>
+    <meta name="keywords" content="微购一站 首页"/>
+    <meta name="author" content="xiezhonghai"/>
+    <!--IOS 6添加到主屏后的标题-->
+    <meta name="apple-mobile-web-app-title" content="首页">
+    <link rel="stylesheet" type="text/css" href="css/public.css" />
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+    <style type="text/css">
+        .wg-header-title{position: relative; width: auto;height: 0.88rem;padding: 0.22rem}
+        .wg-icon{position: absolute;display: block; width: 0.45rem;height: 0.45rem;}
+        .wg-menu{top:0.22rem;left: 0.22rem;}
+        .wg-search{top: 0.22rem;right: 0.22rem;}
+        .wg-slide-nav{width: auto;height: 0.88rem;}
+        .wg-slide-nav .swiper-slide a{display: block;width: 100%;height: 0.88rem;float:left; font-size: 0.26rem;color: #5c5c5c;line-height: 0.88rem;text-align: center;}
+        /*首页内容模块*/
+        .wg-index-content-box{position: relative; padding: 1.76rem 0 0.98rem;width: 100%;height: auto;}
+         /*没有导航栏的样式*/
+        .wg-index-content-box-nav{ padding: 0.88rem 0 0.98rem;width: 100%;height: auto;}
+        .swiper-pagination-bullet {background: #fff;opacity: 1}
+        .swiper-pagination-bullet-active {background: #ff6138; }
+
+        .wg-category-box{position: relative; width: auto;height: 4.08rem;overflow: hidden;}
+        .wg-category-swiper-container .swiper-slide a{display: block;width: 25%;height: 1.76rem;float:left;color: #5c5c5c;}
+        .wg-c-icon{display: block;width: 0.9rem;height: 0.9rem;margin: 0.22rem auto;}
+        .wg-c-txt{text-align: center;width: auto;height: auto;line-height: 0.24rem;font-size: 0.24rem;margin-top: 0.2rem;}
+        .wg-c-pagination{width: auto;height: 14px;position: absolute;left: 50%;bottom:5px;transform:translateX(-50%);-webkit-transform:translateX(-50%);-moz-transform:translateX(-50%);}
+        .wg-c-pBox{display: block; width: 0.14rem;height: 0.14rem;background: #f1f1f1;border-radius: 100%;-webkit-border-radius: 100%;-moz-border-radius: 100%;float:left;margin-right: .1rem;}
+        .wg-c-pBox.active{background: #ff6138;}
+        .wg-msg-scroll{position: relative; width: auto;height: 0.88rem;margin: 0.2rem auto;overflow: hidden;}
+        .wg-msg-scroll ul{position: absolute;top: 0;left: 0;width: 100%;padding: 0.22rem;}
+        .wg-msg-scroll ul li{width: auto;height: 0.44rem;padding-left: 1.12rem;padding-right: 0.44rem;}
+        .wg-main-dis{width: auto;height:auto;overflow: hidden; margin-bottom: 0.1rem;}
+        .wg-main-dis .wg-main-title{padding: 0 0.22rem;width: auto;height: 0.98rem;overflow: hidden;}
+        .wg-main-dis .title-line{display: block; width: 2.68rem;height: 1px;background: #ebebeb;float:left;margin-top: 0.5rem;}
+        .wg-main-dis .title-text{display:block;width: 1.7rem;height: auto;color: #5c5c5c;float:left;font-size: 0.26rem;margin-top: 0.36rem;line-height: 0.26rem;text-align: center}
+        .wg-main-img{position: relative;}
+        .wg-main-img .img-label{display: block;width: 5.6rem;height: 0.88rem;background: rgba(255,255,255,.7);position: absolute;bottom: 0;left: 50%;margin-left: -2.8rem;text-align: center;font-size: 0.24rem; color: #5C5C5C;line-height: 0.88rem;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
+        .wg-main-SlideBox{width: auto;height: 2.22rem;overflow: hidden;padding: 0 0.22rem;margin: 0.2rem 0  0.36rem;}
+        .wg-main-intro{width: auto;height: 0.96rem;padding: 0 0.22rem;}
+        .wg-list-pane{padding: 0 0.22rem;}
+        .wg-list-box{width: auto;height: auto;overflow: hidden;}
+        .wg-list-items{width: 3.42rem;height: auto;float:left;margin-right: 0.2rem;background: #fff;margin-bottom: 0.2rem;}
+        .wg-list-items .wg-item-img{display: block; width: 3.42rem;height: 3.42rem;overflow: hidden;}
+        .wg-list-items .wg-items-info{width: auto;height: auto;padding: 0.36rem 0.2rem;}
+        .wg-list-items .wg-items-info .wg-item-name{width:auto;height: 0.28rem;font-size: 0.24rem;line-height: 0.3rem;color: #5c5c5c;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+        .wg-list-items .wg-items-info .wg-item-price{font-size: 0.24rem;line-height: 0.24rem;margin-top: 0.2rem;color: #ff6138;}
+        .wg-list-items .wg-items-info .wg-item-price em{font-size:0.2rem;}
+
+
+        .loading-status{position: relative; width: auto;height: 0.6rem;background: transparent;color: #aaa;font-size: 0.24rem;text-align: center;line-height: 0.6rem;margin: 0.1rem 0;}
+        .wg-footer{position: fixed;bottom: 0;left: 0;border-top: 1px solid #e5e5e5; width: 100%;height: 0.98rem;}
+        .wg-footer-nav{width: auto;height: 0.98rem;overflow: hidden; display: box;display: -webkit-box;display: -moz-box;display: -o-box;}
+        .footer-box{display: block;width: auto;height: 0.98rem;box-flex:1;-webkit-box-flex:1;-moz-box-flex:1;-o-box-flex:1;}
+        .footer-box .wg-icon-box{position: relative; display: block;margin: 0.22rem auto;width: 0.45rem;height: 0.45rem;}
+        .wg-badge{position: absolute;display: block;font-size: 0.24rem;line-height: 0.32rem;text-align: center;color: #fff; width: 0.32rem;height: 0.32rem;top: -0.08rem;right: -0.08rem; border: 1px solid #fff;background: #ff6138;border-radius: 100%;-webkit-border-radius: 100%;-moz-border-radius: 100%;}
+    </style>
+    <title>首页优化版</title>
+</head>
+<body>
+<!--首页头部-->
+  <div class="fixOn bgColorWhite">
+      <div class="wg-header-title bgColorOrange"><a href="" class="wg-icon wg-menu ico-menu"></a><a href="" class="wg-icon wg-search ico-zoom"></a><img src="images/index-logo.png" class="img-responsive" /></div>
+      <div class="wg-slide-nav">
+          <div class="swiper-container header-swiper-container bgColorWhite">
+              <div class="swiper-wrapper header-swiper-wrapper">
+                  <div class="swiper-slide"><a href="">微购首页</a></div>
+                  <div class="swiper-slide"><a href="">微购夺宝</a></div>
+                  <div class="swiper-slide"><a href="">尖货闪购</a></div>
+                  <div class="swiper-slide"><a href="">海外好货</a></div>
+                  <div class="swiper-slide"><a href="">明星店铺</a></div>
+                  <div class="swiper-slide"><a href="">剁手精选</a></div>
+                  <div class="swiper-slide"><a href="">猜你喜欢</a></div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!--首页内容块-->
+  <div class="wg-index-content-box">
+
+      <div class="wg-slide-img">
+          <div class="swiper-container slide-img-swiper-container">
+              <div class="swiper-wrapper slide-img-swiper-wrapper">
+                  <div class="swiper-slide"><img src="images/750x375.jpg" class="img-responsive" data-src="images/slideImg01.jpg" /> </div>
+                  <div class="swiper-slide"><img src="images/750x375.jpg" class="img-responsive" data-src="images/slideImg01.jpg" /> </div>
+              </div>
+              <div class="swiper-pagination slide-img-swiper-pagination"></div>
+          </div>
+      </div>
+
+      <!--分类展示-->
+      <div class="wg-category-box bgColorWhite">
+          <div class="swiper-container wg-category-swiper-container">
+              <div class="swiper-wrapper wg-category-swiper-wrapper">
+                  <div class="swiper-slide wg-category-swiper-slide">
+                      <a href=""><span class="wg-c-icon"><img src="images/222x222.jpg" data-src="images/fzxp.png" class="img-responsive" /></span><p class="wg-c-txt">服饰鞋品</p></a>
+                      <a href=""><span class="wg-c-icon"><img src="images/222x222.jpg" data-src="images/mzhf.png" class="img-responsive" /></span><p class="wg-c-txt">美妆护肤</p></a>
+                      <a href=""><span class="wg-c-icon"><img src="images/222x222.jpg" data-src="images/wbps.png" class="img-responsive" /></span><p class="wg-c-txt">腕表配饰</p></a>
+                      <a href=""><span class="wg-c-icon"><img src="images/222x222.jpg" data-src="images/xxls.png" class="img-responsive" /></span><p class="wg-c-txt">休闲零食</p></a>
+                      <a href=""><span class="wg-c-icon"><img src="images/222x222.jpg" data-src="images/smdq.png" class="img-responsive" /></span><p class="wg-c-txt">数码电器</p></a>
+                      <a href=""><span class="wg-c-icon"><img src="images/222x222.jpg" data-src="images/sbpj.png" class="img-responsive" /></span><p class="wg-c-txt">箱包皮具</p></a>
+                      <a href=""><span class="wg-c-icon"><img src="images/222x222.jpg" data-src="images/myyt.png" class="img-responsive" /></span><p class="wg-c-txt">母婴孕童</p></a>
+                      <a href=""><span class="wg-c-icon"><img src="images/222x222.jpg" data-src="images/qjsn.png" class="img-responsive" /></span><p class="wg-c-txt">清洁收纳</p></a>
+                  </div>
+                  <div class="swiper-slide wg-category-swiper-slide">
+                      <a href=""><span class="wg-c-icon"><img src="images/222x222.jpg" data-src="images/nfzl.png" class="img-responsive" /></span><p class="wg-c-txt">农副杂粮</p></a>
+                      <a href=""><span class="wg-c-icon"><img src="images/222x222.jpg" data-src="images/sgsx.png" class="img-responsive" /></span><p class="wg-c-txt">蔬果生鲜</p></a>
+                      <a href=""><span class="wg-c-icon"><img src="images/222x222.jpg" data-src="images/cyls.png" class="img-responsive" /></span><p class="wg-c-txt">茶酒粮油</p></a>
+                      <a href=""><span class="wg-c-icon"><img src="images/222x222.jpg" data-src="images/bjzb.png" class="img-responsive" /></span><p class="wg-c-txt">保健滋补</p></a>
+                  </div>
+              </div>
+          </div>
+          <div class="wg-c-pagination">
+              <span class="wg-c-pBox active"></span>
+              <span class="wg-c-pBox"></span>
+          </div>
+      </div>
+
+       <!--平台滚动信息-->
+      <div class="wg-msg-scroll bgColorWhite">
+         <ul>
+            <li></li>
+         </ul>
+      </div>
+
+      <!--微购今日鲜-->
+      <div class="wg-main-dis bgColorWhite">
+         <div class="wg-main-title"><span class="title-line"></span><span class="title-text">微购今日鲜</span><span class="title-line"></span></div>
+         <div class="wg-main-img"><img src="images/Brand-mall02.jpg" class="img-responsive"/></div>
+         <div class="wg-main-SlideBox">
+            <!--后期图片滑动-->
+         </div>
+      </div>
+
+      <!--微购特卖会-->
+      <div class="wg-main-dis bgColorWhite">
+          <div class="wg-main-title"><span class="title-line"></span><span class="title-text">微购特卖会</span><span class="title-line"></span></div>
+          <div class="wg-main-img"><img src="images/Brand-mall01.jpg" class="img-responsive"/><span class="img-label">妩媚娇俏的神奇魔法道具</span></div>
+          <div class="wg-main-intro"></div>
+      </div>
+
+      <!--微购夺宝-->
+      <div class="wg-main-dis bgColorWhite">
+          <div class="wg-main-title"><span class="title-line"></span><span class="title-text">微购夺宝</span><span class="title-line"></span></div>
+          <div class="wg-main-img"><img src="images/Brand-mall01.jpg" class="img-responsive"/></div>
+          <div class="wg-main-intro"></div>
+      </div>
+
+      <!--尖货闪购-->
+      <div class="wg-main-dis bgColorWhite">
+          <div class="wg-main-title"><span class="title-line"></span><span class="title-text">尖货闪购</span><span class="title-line"></span></div>
+          <div class="wg-main-img"><img src="images/Brand-mall01.jpg" class="img-responsive"/></div>
+          <div class="wg-main-intro"></div>
+      </div>
+       <!--猜你喜欢-->
+       <!--下拉列表-->
+      <div class="wg-list-pane">
+         <div class="wg-list-box">
+
+            <div class="wg-list-items">
+                <span class="wg-item-img"><img src="images/item01.jpg" class="img-responsive" /></span>
+                <div class="wg-items-info">
+                    <p class="wg-item-name">OPPO R9S全网通正品手机</p>
+                    <p class="wg-item-price"><em>¥</em>5654.8</p>
+                </div>
+            </div>
+             <!--wg-list-items-->
+
+             <div class="wg-list-items marginR">
+                 <span class="wg-item-img"><img src="images/item01.jpg" class="img-responsive" /></span>
+                 <div class="wg-items-info">
+                     <p class="wg-item-name">OPPO R9S全网通正品手机</p>
+                     <p class="wg-item-price"><em>¥</em>5654.8</p>
+                 </div>
+             </div>
+             <!--wg-list-items-->
+
+             <div class="wg-list-items">
+                 <span class="wg-item-img"><img src="images/item01.jpg" class="img-responsive" /></span>
+                 <div class="wg-items-info">
+                     <p class="wg-item-name">OPPO R9S全网通正品手机</p>
+                     <p class="wg-item-price"><em>¥</em>5654.8</p>
+                 </div>
+             </div>
+             <!--wg-list-items-->
+
+             <div class="wg-list-items marginR">
+                 <span class="wg-item-img"><img src="images/item01.jpg" class="img-responsive" /></span>
+                 <div class="wg-items-info">
+                     <p class="wg-item-name">OPPO R9S全网通正品手机</p>
+                     <p class="wg-item-price"><em>¥</em>5654.8</p>
+                 </div>
+             </div>
+             <!--wg-list-items-->
+
+         </div>
+         <div class="loading-status">正在加载中...</div>
+      </div>
+    </div>
+<!--首页底部-->
+<div class="wg-footer bgColorWhite">
+   <div class="wg-footer-nav">
+       <a href="" class="footer-box"><span class="wg-icon-box"><img src="images/index-home.png" class="img-responsive" /></span></a>
+       <a href="" class="footer-box"><span class="wg-icon-box"><img src="images/index-order.png" class="img-responsive" /></span></a>
+       <a href="" class="footer-box"><span class="wg-icon-box"><i class="wg-badge">5</i> <img src="images/index-cart.png" class="img-responsive" /></span></a>
+       <a href="" class="footer-box"><span class="wg-icon-box"><img src="images/index-profile.png" class="img-responsive" /></span></a>
+   </div>
+</div>
+<script type="text/javascript" src="js/size.js"></script>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript">
+    var swiper = new Swiper('.header-swiper-container',{
+        freedom:true,
+        freeModeMomentum:true,
+        freeModeMomentumVelocityRatio:5,
+        slidesPerView:4
+    });
+
+    var swiper2 = new Swiper('.slide-img-swiper-container',{
+        loop:true,
+        autoplayDisableOnInteraction:false,
+        autoplay:3500,
+        pagination:".slide-img-swiper-pagination"
+    });
+
+
+    var swiper3 = new Swiper('.wg-category-swiper-container',{
+        loop:false,
+        onSlideChangeStart:function(swiper3){
+            $(".wg-c-pBox").removeClass("active");
+            $(".wg-c-pBox").eq(swiper3.activeIndex).addClass("active");
+        }
+    });
+
+    /*图片预加载*/
+    //图片轮播的图片预加载
+    $('.slide-img-swiper-wrapper .swiper-slide img').each(function(i,t){
+        $(this).attr({'src':$(this).attr('data-src')})
+    });
+
+    $(".wg-category-swiper-wrapper .swiper-slide img").each(function(i,t){
+        $(this).attr({'src':$(this).attr('data-src')})
+
+    });
+
+    /*列表的下拉加载*/
+    //获取全文档的高度
+    ($.fn.lazyLoading = {
+
+
+
+
+
+
+    })(Zepto)
+
+</script>
+</body>
+</html>

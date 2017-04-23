@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/public.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/order.css" media="screen"/>
+    <title>订单详情</title>
+</head>
+<body>
+<!--首页头部-->
+<div class="fixOn">
+    <div class="index-head bgColorWhite">
+        <a href="javascript:history.back();" class="menu-left"><i class="ico ico-back"></i></a>
+        <div class="menu-mid">
+            <span class="head-title">订单详情</span>
+        </div>
+        <a href="javascript:void(0);" class="menu-right"><i class="ico ico-zoom-back"></i></a>
+    </div>
+    <div class="order-details bgColorWhite">
+        <a href="#" class="active">订单信息</a><a href="#">物流信息</a>
+        <span class="underLine" style="width:50%"></span>
+    </div>
+</div>
+
+<div class="order-details-wrap">
+    <!--收货地址-->
+    <div class="order-adress bgColorWhite ">
+        <a href="">
+            <span class="map-GPS"><i class="ico-gps"></i></span>
+            <span class="addr-info-pane"><p class="addr-main" style="margin-bottom: 1rem;"><em class="addr-name">孟坦</em><em>18888888888</em>
+            </p><p class="addr-main">浙江省台州市椒江区海门街道景辉小区42幢2单元</p></span>
+            <span class="icon icon-angle-right arrow-right"></span>
+        </a>
+    </div>
+
+    <!--订单物品信息-->
+    <div class="order-goods bgColorWhite padding10">
+        <div class="order-goods-title">
+            <span class="order-shop">笨笨猪的小童装小店</span>
+           <!-- <a href="javascript:void(0);" class="order-altBtn"><i class="order-ico"></i><em>修改</em></a>-->
+        </div>
+        <div class="order-intro">
+            2016夏季薄款女开衫外搭修身短款长袖空调衫针织衫披
+        </div>
+        <div class="order-cart">
+            <span class="order-pro-name col33">佛陀唇膏</span>
+            <span class="order-pro-standard col33">活力玫</span>
+                <span class="order-pro-btnPane col33">x<em class="number">2</em><input type="text" class="alt-number"
+                                                                                       value="" onblur="altNow(this)"/></span>
+        </div>
+        <div class="order-cart">
+            <span class="order-pro-name col33">佛陀唇膏</span>
+            <span class="order-pro-standard col33">活力玫</span>
+                <span class="order-pro-btnPane col33">x<em class="number">2</em><input type="text" class="alt-number"
+                                                                                       value="" onblur="altNow(this)"/></span>
+        </div>
+    </div>
+
+    <!--优惠信息-->
+    <div class="order-preferential bgColorWhite padding10 marginB1rem" style="margin:0">
+        <div class="order-preferential-title">
+            <span class="order-preferential-left">优惠信息</span>
+            <span class="order-preferential-right"><!--<i class="ico icon-angle-down"></i>--></span>
+        </div>
+        <div class="order-preferential-title">
+            <span class="order-preferential-left txtGray">首次下单</span>
+            <span class="order-preferential-right txtGray">-1</span>
+        </div>
+        <div class="order-preferential-title">
+            <span class="order-preferential-left txtGray">微购特卖会</span>
+            <span class="order-preferential-right txtGray">-25</span>
+        </div>
+        <div class="order-preferential-title">
+            <span class="order-preferential-left txtGray">微购优惠券</span>
+            <span class="order-preferential-right"><em class="txtGray">暂无优惠券</em> <!--<i class="ico icon-angle-main"></i><i class="ico icon-circle" style="font-size:1rem;color: #ff6138;margin-top:5px;margin-main: 8px;"></i>--></span>
+        </div>
+        <div class="order-preferential-title">
+            <span class="order-preferential-left txtGray" style="font-size:1.1rem;">实际付款</span>
+            <span class="order-preferential-right txtOrange txtGray" style="font-size:1.5rem;"><em>¥</em>1158.5</span>
+        </div>
+    </div>
+
+    <!--物流信息-->
+    <div class="order-preferential bgColorWhite padding10" style="margin:0">
+        <div class="order-preferential-title">
+            <span class="order-preferential-left">物流信息</span>
+            <span class="order-preferential-right"></span>
+        </div>
+        <div class="order-preferential-title">
+            <span class="order-preferential-left txtGray">顺丰快递</span>
+            <span class="order-preferential-right txtGray">2132399229084633</span>
+        </div>
+
+        <div class="order-details-transition borderLineNone">
+            <ul class="order-details-transition-box">
+                <li class="order-details-items "><i class="icon item-left"></i><span class="boldLine boldLine-btm"></span><div class="transition-state">商家正通知快递公司揽件</div><div class="transition-time">2015年05月25日</div></li>
+                <li class="order-details-items"><i class="icon item-left"></i><span class="boldLine-Mid"></span><div class="transition-state">永康市 从站点出发</div><div class="transition-time">2015年05月25日</div></li>
+                <li class="order-details-items"><i class="icon item-left"></i><span class="boldLine-Mid"></span><div class="transition-state">金华市金东速递处理中心 从站点出发</div><div class="transition-time">2015年05月25日</div></li>
+                <li class="order-details-items"><i class="icon item-left"></i><span class="boldLine-Mid"></span><div class="transition-state">上门取件，揽收员：李志跃</div><div class="transition-time">2015年05月25日</div></li>
+                <li class="order-details-items"><i class="icon item-left"></i><span class="boldLine-Mid"></span><div class="transition-state">【台州市】快件已到达 台州站点</div><div class="transition-time">2015年05月25日</div></li>
+                <li class="order-details-items"><i class="icon item-left"></i><span class="boldLine-Mid"></span><div class="transition-state">台州市分公司椒江海门经营部，安排投递，操作员：施小强</div><div class="transition-time">2015年05月25日</div></li>
+                <li class="order-details-items active"><i class="icon item-left"></i><span class="boldLine boldLine-top"></span><div class="transition-state">永康市 从站点出发</div><div class="transition-time">2015年05月25日</div></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".order-details a").click(function(){
+            $(this).addClass("active").siblings().removeClass("active");
+            $(".underLine").stop().animate({"left":$(this).index()*50+"%"},200,"easeOutExpo");
+        });
+    });
+</script>
+</body>
+</html>

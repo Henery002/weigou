@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/public.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/order.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/category.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/profile.css" media="screen"/>
+    <title>个人信息中心</title>
+</head>
+<body>
+<div class="fixOn">
+    <div class="index-head bgColorOrange " style="border-bottom: 0;">
+        <a href="javascript:history.back();" class="menu-left"><i class="ico ico-back-white"></i></a>
+        <div class="menu-mid"></div>
+        <a href="javascript:void(0);" class="menu-right"><i class="ico ico-zoom"></i></a>
+    </div>
+</div>
+<div class="category-wrap-all">
+    <div class="order-preferential bgColorWhite padding10">
+        <a href="javascript:void(0);" onclick="uploadFile(this);">
+            <div class="order-preferential-title" style="padding-top:3.6rem;padding-bottom: 3.6rem;">
+                <span class="order-preferential-left">修改头像</span>
+                <span class="order-preferential-right"><span class="user-prev-img"><img src="images/tx.jpg"
+                                                                                        alt="头像"/></span> <i
+                        class="ico icon-angle-right"></i></span>
+            </div>
+        </a>
+        <a href="alt-username.html">
+            <div class="order-preferential-title">
+                <span class="order-preferential-left">设置昵称</span>
+                <span class="order-preferential-right"><i class="ico icon-angle-right"></i><span
+                        class="user-name">狼人</span></span>
+            </div>
+        </a>
+        <a href="alt-password.html">
+            <div class="order-preferential-title borderLineNone">
+                <span class="order-preferential-left">修改密码</span>
+                <span class="order-preferential-right"><i class="ico icon-angle-right"></i></span>
+            </div>
+        </a>
+    </div>
+
+
+    <div class="order-preferential bgColorWhite padding10">
+        <a href="javascript:void(0);" onclick="bindWebchat(this)">
+            <div class="order-preferential-title">
+                <span class="order-preferential-left">微信绑定</span>
+                <span class="order-preferential-right"><span class="binded">已绑定</span></span>
+            </div>
+        </a>
+        <a href="mobile-binding.html">
+            <div class="order-preferential-title">
+                <span class="order-preferential-left">手机绑定</span>
+                <span class="order-preferential-right"><span class="binding">去绑定</span></span>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="upload-layer">
+    <div class="upload-pane">
+        <a href="">从手机相册中选取<input type="file" class=""></a>
+        <a href="javascript:void(0);" onclick="cancleUpload(this)">取消</a>
+    </div>
+</div>
+
+<div class="weixin-layer">
+    <div class="QR-code">
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+   function uploadFile(e){
+        $(".upload-layer").fadeIn(260);
+   }
+
+   function cancleUpload(f){
+       $(".upload-layer").fadeOut(200);
+   }
+
+   function bindWebchat(g){
+       $(".weixin-layer").fadeIn(260);
+   }
+
+   $(function(){
+       $(".weixin-layer").click(function(z){
+         var evt = window.event|| z, obj = "";
+           obj = evt.srcElement||evt.target;
+          if($(obj).attr("class")=="weixin-layer"){
+              $(".weixin-layer").fadeOut(200);
+          }
+       });
+
+   });
+</script>
+</body>
+</html>
